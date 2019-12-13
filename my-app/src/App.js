@@ -1,36 +1,22 @@
 import React from "react";
 import "./App.css";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Homepage from "./pages/homepage/homepage";
 
-const Homepages = props => {
-  console.log(props);
-  return (
-    <div>
-      <h1>HomePage</h1>
-    </div>
-  );
-};
-
-const TopicsList = () => (
+const HatsPage = () => (
   <div>
-    <h1>Topics List Page</h1>
-  </div>
-);
-
-const TopicDetail = () => (
-  <div>
-    <h1>Topic Detail Page</h1>
+    <h1>HATS PAGE </h1>
   </div>
 );
 
 function App() {
   return (
     <div>
-      <Route exact path="/" component={Homepages} />
-      <Route exact path="/topics" component={TopicsList} />
-      <Route path="/topics/:topicId" component={TopicDetail} />
+      <Switch>
+        <Route exact path="/" component={Homepage} />
+        <Route exact path="/hats" component={HatsPage} />
+      </Switch>
     </div>
   );
 }
