@@ -20,7 +20,7 @@ class App extends React.Component {
 
   // This is how we connect the user to our app. We created this user authentication pack with firebase. So the important thing to know when creating this dfuction is that we need to close it
   // To close it we will use unsubscribeFromAuth and we will unmount to be able to close the cycle
-
+  // This is a test
   unsubscribeFromAuth = null;
 
   componentDidMount() {
